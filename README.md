@@ -43,14 +43,18 @@ We use a LSTM , single-layer Recurrent Neural Network.
 ### 4. LDA vs RNN
 By using LDA and RNN in the same time, the model can get more diverse recommendation results. And we choose LDA and RNN, because they train the model in different way, Bag of Words (LDA) and N-Gram (RNN). And the result differs in the way in below.
 
-
-INPUT : 川普 (Trump) :   
+```sh
+INPUT : 川普 (Trump) 
+```
+```sh
 LDA results : 
 [ "中國" (China),   "美國"(U.S.A.),  "日本"(Japan), "北韓"(North Korea)]
+```
+```sh
 RNN results :
- [ "杜特蒂" ( president of Philippines ),   "icbm"(intercontinental ballistic missile),  
+ [ "杜特蒂" ( president of Philippines ), "icbm"(intercontinental ballistic missile),  
  "文在寅" (president of Korea) , "普丁"(Putin, president of Russia) ]
-
+```
 LDA learn more "international news characteristic" from "Trump", because it read the news like it's a bag of word.
 On the other hand, RNN learn more "person name" and "president" characteristic from "Trump".
 Therefore,  combining the results of 2 algorithm, the model can get more diverse recommendation results.
